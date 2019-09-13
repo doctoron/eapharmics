@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "/Users/ranton/code"
+		},
+		{
+			"path": "/Users/ranton/bootcamp/sandbox"
+		},
+		{
+			"path": "/Users/ranton/code/Udemy-Code/react-complete-guide/udemy-burger"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "code",
+		"git.ignoreLimitWarning": true
+	}
+}
