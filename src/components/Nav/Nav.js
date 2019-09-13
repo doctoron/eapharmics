@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
+    Input,
+    InputGroup,
+    InputGroupAddon,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -9,6 +12,7 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
+// import Search from '../../containers/Search/Search';
 
 
 class MyNav extends React.Component {
@@ -29,14 +33,11 @@ class MyNav extends React.Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand tag={Link} to="/">Eapharmics Home</NavbarBrand>
+                    <NavbarBrand tag={Link} to="/">Eapharmics</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
 
-                            <NavItem >
-                                <NavLink tag={Link} to="/software">Software </NavLink>
-                            </NavItem>
 
                             <NavItem >
                                 <NavLink tag={Link} to="/software">Software </NavLink>
@@ -51,13 +52,19 @@ class MyNav extends React.Component {
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/about" >About</NavLink>
-                            </NavItem>
-
-                            <NavItem>
                                 <NavLink tag={Link} to="/contact">Contact</NavLink>
                             </NavItem>
 
+                            <NavItem>
+                                <NavLink tag={Link} to="/about" >About</NavLink>
+                            </NavItem>
+
+                            <NavItem >
+                                <InputGroup>
+                                    <InputGroupAddon addonType="prepend">Search</InputGroupAddon>
+                                    <Input />
+                                </InputGroup>
+                            </NavItem>
                         </Nav>
                     </Collapse>
                 </Navbar>
