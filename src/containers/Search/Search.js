@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Search = () => {
+const Search = (props) => {
   return (
   <div></div>
   );
