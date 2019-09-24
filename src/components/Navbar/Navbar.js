@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/evapps-logo.png';
 
 import {
-    Input,
-    InputGroup,
-    InputGroupAddon,
+    // Input,
+    // InputGroup,
+    // InputGroupAddon,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -72,12 +72,12 @@ class MyNav extends React.Component {
                                 <NavLink tag={Link} to="/about" >About</NavLink>
                             </NavItem>
 
-                            <NavItem >
+                            {/* <NavItem >
                                 <InputGroup>
                                     <InputGroupAddon addonType="prepend">Search</InputGroupAddon>
                                     <Input />
-                                </InputGroup>
-                            </NavItem>
+                                </InputGroup> 
+                            </NavItem> */}
                         </Nav>
                     </Collapse>
                 </Navbar>

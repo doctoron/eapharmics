@@ -4,29 +4,30 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #af9a7d;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBlack: #222;
+  --primaryColor: #58b0c0;
+  --mainWhite: #ffffff;
+  --offWhite: #fdfdfd;
+  --mainBlack: #010101;
   --mainGrey: #ececec;
-  --darkGrey: #cfcfcf;
+  --darkGrey: #cfcfcf36;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 /* globals */
-body {
-  padding-top: 66px;
+html, body {
+  padding-top: 5px;
   color: var(--mainBlack);
-  background: var(--mainWhite);
+  background: var(--offWhite);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.4;
-  height: 100vh; 
-  background-size: cover;
+  line-height: 1.2;
+  height: 100%; 
+  margin: 0;
+  text-align: center;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
-  text-align: center;
 }
 h1 {
   font-size: 3em;
@@ -53,9 +54,16 @@ h5 {
   margin-bottom: 1.5em;
 }
 h6 {
-  font-size: 1em;
+  font-size: .7em;
   font-weight: bold;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.0em;
+}
+.content {
+  min-height: 100%;
+}
+.content-inside {
+  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .btn-primary {
@@ -92,14 +100,15 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 /* end of globals */
+
 /* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.5rem 2rem;
-  background: var(--offWhite);
+  padding: 0.5rem 1rem;
+  background: var(--primaryColor);
   z-index: 1;
 }
 .nav-header {
@@ -117,11 +126,11 @@ h6 {
   width: auto;
   margin: 0;
   padding: 0;
-  max-height: 80px;
+  max-height: 60px;
   max-width: 350px;
 }
 .nav-icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--primaryColor);
 }
 .nav-links {
@@ -169,25 +178,59 @@ h6 {
 }
 /* end of navbar */
 
+/* footer */
+.footer, 
+.push {
+  height: 20px;
+  margin-top: -20px;
+}
+/* end of footer */
+
 /* Hero */
 .defaultHero,
 .epaHero {
-  height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
-  background: url('./assets/images/ea_toxic.jpg') center/cover no-repeat;
+  height: 100%;
+  min-height: calc(var(--vh, 1vh) * 80);
+  background: url('./assets/images/ea_toxic.jpg') no-repeat center center;
+  /* background: url('./assets/images/ea_toxic.jpg') center/cover center no-repeat; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .fdaHero {
-  height: 100vh; /*Fallback for browsers that do not support Custom Properties */
-  min-height: calc(var(--vh, 1vh) * 100);
+  height: 100%; /*Fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 80);
   background: url('./assets/images/EA_Capsules.jpg') center/cover no-repeat;
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 /* End of Hero */
+
+/* img.bg */
+img.bg {
+  /* Set rules to fill background */
+  /* min-height: 100%;  */
+  /* min-width: 1024px;  */
+  width:100%; /* Set up proportionate scaling */
+  /* height: auto;  */
+  /* /* Set up positioning */ 
+  /* position: fixed;   */
+  top:0;
+  left: 0;
+}
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
 
 /* Banner */
 .banner {
@@ -316,6 +359,20 @@ h6 {
   }
 }
 /* end pf featured images */
+
+/* table layout */
+table {
+  width: 100%;
+  table-layout: fixed;
+  background-color: var(--mainGrey)
+}
+table tr th td {
+  text-align: left;
+  background-color: var(--mainWhite);
+  color: black;
+}
+/* end of table layout */
+
 /* results-list */
 .results-list {
   padding: 3rem 0;

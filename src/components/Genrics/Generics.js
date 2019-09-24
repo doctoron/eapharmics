@@ -6,11 +6,11 @@ const Generics = (props) => {
         <div >
             <Jumbotron fluid className='fdaHero'>
                 <Container fluid>
-                    <Card body inverse color="primary"><b>USFDA Generic Drugs</b>
+                    <Card body inverse color="success" style={{opacity: 0.8}}><b>USFDA Generic Drugs</b>
                         <form>
                             <input>
                             </input> <br /><br />
-                            <Button color="success">Search</Button>
+                            <Button color="primary">Search</Button>
                         </form>
                     </Card>
                 </Container>

@@ -9,6 +9,7 @@ import Services from './components/Services/Service';
 import Cfr from './components/Cfr/Cfr';
 import Contact from './components/Contact/Contact';
 import About from './components/About/About';
+import Footer from './components/Footer/Footer';
 import Error from './hoc/Error';
 
 
@@ -30,6 +31,7 @@ class App extends Component {
             <Route path="/cfr" component={Cfr} />
             <Route component={Error} />
           </Switch>
+        <Footer className="footer" />
         </>
       </Router>
     );
