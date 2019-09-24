@@ -1,10 +1,16 @@
 import React from 'react'
+import { Jumbotron, Container, Card } from 'reactstrap';
 
-const Service = (props) => {
+const Generics = (props) => {
     return (
-        <div>
-            <h3>Services Page</h3>
+        <div >
+            <Jumbotron fluid >
+                <Container fluid>
+                    <Card body inverse color="primary"><b>Our Services</b></Card>
+                </Container>
+
+            </Jumbotron>
         </div>
     )
 }
-export default Service;
+export default Generics;

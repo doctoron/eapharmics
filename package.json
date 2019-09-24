@@ -9,6 +9,7 @@
     "react-icons": "^3.7.0",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.1",
+    "styled-components": "^4.4.0",
     "typescript": "^3.5.3"
   },
   "scripts": {
