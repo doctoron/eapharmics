@@ -40,36 +40,36 @@ class MyNav extends React.Component {
         return (
             <div className="nav-header">
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand tag={Link} to="/">
+                    <NavbarBrand tag={Link} to="/" >
                     <img src={Logo} className="nav-image" alt="EaPharmics" />
                     </NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
+                        <Nav className="ml-auto" navbar> 
                             <UncontrolledDropdown nav inNavbar >
                                 <DropdownToggle nav caret>
                                     SaaS
                                 </DropdownToggle>
                                 <DropdownMenu right>
-                                    <DropdownItem tag={Link} to="/toxics">eaToxic</DropdownItem>
-                                    <DropdownItem tag={Link} to="/generics">eaGenerics</DropdownItem>
+                                    <DropdownItem tag={Link} to="/toxics" onClick={this.toggle}>eaToxic</DropdownItem>
+                                    <DropdownItem tag={Link} to="/generics" onClick={this.toggle}>eaGenerics</DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/services">Services</NavLink>
+                                <NavLink tag={Link} to="/services" onClick={this.toggle}>Services</NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/cfr">21 CFR Part II</NavLink>
+                                <NavLink tag={Link} to="/cfr" onClick={this.toggle}>21 CFR Part II</NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/contact">Contact</NavLink>
+                                <NavLink tag={Link} to="/contact" onClick={this.toggle}>Contact</NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/about" >About</NavLink>
+                                <NavLink tag={Link} to="/about" onClick={this.toggle}>About</NavLink>
                             </NavItem>
 
                             {/* <NavItem >

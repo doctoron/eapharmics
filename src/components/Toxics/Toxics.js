@@ -6,11 +6,11 @@ const Toxics = (props) => {
         <div >
             <Jumbotron fluid className='epaHero'>
                 <Container fluid>
-                    <Card body inverse color="success" style={{opacity: 0.8}}><b> USEPA Toxic Chemicals</b>
+                    <Card body inverse color="danger" style={{opacity: 0.7}}><b> USEPA Toxic Chemicals</b>
                         <form>
                             <input>
                             </input> <br /><br />
-                            <Button color="warning">Search</Button>
+                            <Button color="warning"> Search</Button>
                         </form>
                     </Card>
                 </Container>
