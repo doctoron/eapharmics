@@ -14,6 +14,7 @@ const post = (props) => {
     )
 };
 
+
 // Get access to props using higher order component by using HOC
 // export default withRouter(post);
 

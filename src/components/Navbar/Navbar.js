@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/images/evapps-logo.png';
-import './Navbar.css';
+
 import {
     Collapse,
     Navbar,
