@@ -124,8 +124,9 @@ h6 {
 .nav-image {
   height: auto;
   width: auto;
-  margin: 0px;
-  padding: 10px;
+  margin-left: 12px;
+  margin-right: 0px;
+  padding: 5px;
   max-height: 100px;
   max-width: 350px;
 }
