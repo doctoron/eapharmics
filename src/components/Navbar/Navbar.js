@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/evapps-logo.png';
 
 import {
-    // Input,
-    // InputGroup,
-    // InputGroupAddon,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -19,8 +16,8 @@ import {
     DropdownMenu,
     DropdownItem
 } from 'reactstrap';
-// import Search from '../../containers/Search/Search';
 
+// import Search from '../../containers/Search/Search';
 
 class MyNav extends React.Component {
     constructor (props) {
@@ -70,6 +67,9 @@ class MyNav extends React.Component {
 
                             <NavItem>
                                 <NavLink tag={Link} to="/about" onClick={this.toggle}>About</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag={Link} to="/blog" onClick={this.toggle}>Blog</NavLink>
                             </NavItem>
 
                             {/* <NavItem >

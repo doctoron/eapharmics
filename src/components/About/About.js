@@ -1,5 +1,6 @@
 import React from 'react';
 import { Jumbotron, Container, Card } from 'reactstrap';
+import './About.css';
 
 import './About.css';
 

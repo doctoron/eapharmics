@@ -1,11 +1,11 @@
 import React from 'react'
 import { Jumbotron, Container, Row, Col, Card, Table, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import './Contact.css';
 
 class Contact extends React.Component {
     render () {
         return (
-            <div >
+            <div className="contact" >
                 <Jumbotron fluid style={{backgroundColor: '#58b0c0'}} >
                     <Container fluid >
                         <Row>
