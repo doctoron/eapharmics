@@ -1,7 +1,10 @@
+import React, {Component} from 'react';
 import axios from 'axios';
 
-const toxics = axios.create({
-    baseURL: 'https://eapharmics.firebaseio.com/'
+import Toxics from './components/Toxics/Toxics';
+
+const GetToxics = axios.create({
+    baseURL: `https://eapharmics.firebaseio.com/`
 });
 
-export default toxics;
+export default GetToxics;
