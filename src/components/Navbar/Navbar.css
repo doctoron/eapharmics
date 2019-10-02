@@ -1,7 +1,11 @@
 .navbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0px;
     margin: auto;
-    max-height:100px;
-    margin-top: 35px;
+    max-height: 75px;
+    margin-top: 5px;
     border-top: 35px;
     border-bottom: 0px;
     padding-left: -10px;

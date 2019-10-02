@@ -1,13 +1,24 @@
 .FullPost {
-    width: 80%;
+    width: 80vw;
     margin: 20px auto;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
     text-align: center;
 }
 
-.Edit {
+.title {
+    padding-top: 10px;
+}
 
+.body {
+    padding: 5px;
+    text-align: left;
+    margin: 10px;
+}
+
+.Edit {
+    width: 80vw;
+    margin: 20px;
 }
 
 .Edit label {
@@ -23,8 +34,7 @@
     color: #fa923f;
 }
 
-.Edit button:hover,
-.Edit button:active {
+.Edit button:hover, .Edit button:active {
     color: #521751;
 }
 
@@ -32,7 +42,6 @@
     color: red;
 }
 
-.Edit button.Delete:hover,
-.Edit button.Delete:active {
+.Edit button.Delete:hover, .Edit button.Delete:active {
     color: darkred;
 }

@@ -103,10 +103,10 @@ h6 {
 
 /* Navbar */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 10%;
+  width: 80vw;
   padding: 0.5rem 1rem;
   background: var(--primaryColor);
   z-index: 1;

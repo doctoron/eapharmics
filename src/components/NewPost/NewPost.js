@@ -7,13 +7,13 @@ class NewPost extends Component {
     state = {
         title: '',
         content: '',
-        author: 'Ron',
+        author: 'Makesh',
         submitted: false,
     }
-    componentDidMount = () => {
-        // this.props.history.prelace('/posts';) if unauth
-        console.log('DidMount', this.props)
-    }
+    // componentDidMount = () => {
+    //     // this.props.history.prelace('/posts';) if unauth
+    //     console.log('DidMount', this.props)
+    // }
 
     postDataHandler = () => {
         const data = {
@@ -21,13 +21,13 @@ class NewPost extends Component {
             body: this.state.content,
             author: this.state.author
         };
-        axios.post('/posts', data)
+        axios.post('https://jsonplaceholder.typicode.com/posts', data)
             .then(response => {
                 console.log(response);
-                this.props.history.push('/posts')
-                // this.setState({
-                //     submitted: true
-                // })
+    //             this.props.history.push('/posts')
+    //             // this.setState({
+    //             //     submitted: true
+    //             // })
             });
     }
     render () {
@@ -38,7 +38,7 @@ class NewPost extends Component {
         return (
             <div className="NewPost">
                 {redirect}
-                <h1>Add a Post</h1>
+                <h2>Add a Post</h2>
                 <label>Title</label>
                 <input type="text" value={this.state.title} onChange={(event) => this.setState({ title: event.target.value })} />
                 <label>Content</label>
@@ -46,11 +46,12 @@ class NewPost extends Component {
                 <label>Author</label>
                 <select value={this.state.author} onChange={(event) => this.setState({ author: event.target.value })}>
                     <option value="Ron">Ron</option>
-                    <option value="Denise">Denise</option>
                     <option value="Omaar">Omaar</option>
+                    <option value="Makesh">Makesh</option>
 
                 </select>
                 <button onClick={this.postDataHandler}>Add Post</button>
+
             </div>
         );
     }
