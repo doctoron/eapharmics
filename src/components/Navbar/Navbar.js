@@ -1,4 +1,5 @@
 import React from 'react';
+import {Jumbotron, Container} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/images/evapps-logo.png';
@@ -35,53 +36,58 @@ class MyNav extends React.Component {
     }
     render () {
         return (
-            <div className="nav-header">
-                <Navbar color="light" light expand="md">
-                    <NavbarBrand tag={Link} to="/" >
-                    <img src={Logo} className="nav-image" alt="EaPharmics" />
-                    </NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar> 
-                            <UncontrolledDropdown nav inNavbar >
-                                <DropdownToggle nav caret>
-                                    SaaS
+            <Jumbotron>
+                <Container>
+
+                    <div className="nav-header">
+                        <Navbar color="light" light expand="md">
+                            <NavbarBrand tag={Link} to="/" >
+                                <img src={Logo} className="nav-image" alt="EaPharmics" />
+                            </NavbarBrand>
+                            <NavbarToggler onClick={this.toggle} />
+                            <Collapse isOpen={this.state.isOpen} navbar>
+                                <Nav className="ml-auto" navbar>
+                                    <UncontrolledDropdown nav inNavbar >
+                                        <DropdownToggle nav caret>
+                                            SaaS
                                 </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem tag={Link} to="/toxics" onClick={this.toggle}>eaToxic</DropdownItem>
-                                    <DropdownItem tag={Link} to="/generics" onClick={this.toggle}>eaGenerics</DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
+                                        <DropdownMenu right>
+                                            <DropdownItem tag={Link} to="/toxics" onClick={this.toggle}>eaToxic</DropdownItem>
+                                            <DropdownItem tag={Link} to="/generics" onClick={this.toggle}>eaGenerics</DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
 
-                            <NavItem>
-                                <NavLink tag={Link} to="/services" onClick={this.toggle}>Services</NavLink>
-                            </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} to="/services" onClick={this.toggle}>Services</NavLink>
+                                    </NavItem>
 
-                            <NavItem>
-                                <NavLink tag={Link} to="/cfr" onClick={this.toggle}>21 CFR Part II</NavLink>
-                            </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} to="/cfr" onClick={this.toggle}>21 CFR Part II</NavLink>
+                                    </NavItem>
 
-                            <NavItem>
-                                <NavLink tag={Link} to="/contact" onClick={this.toggle}>Contact</NavLink>
-                            </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} to="/contact" onClick={this.toggle}>Contact</NavLink>
+                                    </NavItem>
 
-                            <NavItem>
-                                <NavLink tag={Link} to="/about" onClick={this.toggle}>About</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/blog" onClick={this.toggle}>Blog</NavLink>
-                            </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} to="/about" onClick={this.toggle}>About</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} to="/blog" onClick={this.toggle}>Blog</NavLink>
+                                    </NavItem>
 
-                            {/* <NavItem >
+                                    {/* <NavItem >
                                 <InputGroup>
                                     <InputGroupAddon addonType="prepend">Search</InputGroupAddon>
                                     <Input />
                                 </InputGroup> 
                             </NavItem> */}
-                        </Nav>
-                    </Collapse>
-                </Navbar>
-            </div>
+                                </Nav>
+                            </Collapse>
+                        </Navbar>
+                    </div>
+                </Container>
+            </Jumbotron>
         );
     }
 }

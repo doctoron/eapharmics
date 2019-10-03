@@ -11,7 +11,6 @@ const About = (props) => {
                 <Container fluid>
                     <Card body inverse color="primary"><b>About</b></Card>
                 </Container>
-
             </Jumbotron>
         </div>
     )

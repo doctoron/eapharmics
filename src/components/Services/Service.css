@@ -1,7 +1,5 @@
-.services {
-    /* margin: auto; */
-    /* max-height:100px; */
-    margin-top: 35px;
+.service {
+    margin-top: 45px;
     border-top: 35px;
     border-bottom: 0px;
     padding-top: 30px;
