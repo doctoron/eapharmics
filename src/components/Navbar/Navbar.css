@@ -1,0 +1,16 @@
+.navbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0px;
+    margin: auto;
+    max-height: 75px;
+    margin-top: 5px;
+    border-top: 35px;
+    border-bottom: 0px;
+    padding-left: -10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+}

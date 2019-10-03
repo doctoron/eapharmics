@@ -33,8 +33,8 @@ class App extends Component {
             <Route path="/blog" component={Blog} />
             <Route component={Error} />
           </Switch>
-        <Footer className="footer" />
         </>
+        <Footer className="footer" />
       </Router>
     );
   }

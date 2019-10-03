@@ -2,6 +2,8 @@ import React from 'react';
 import { Jumbotron, Container, Card } from 'reactstrap';
 import './About.css';
 
+import './About.css';
+
 const About = (props) => {
     return (
         <div className="about">
@@ -9,7 +11,6 @@ const About = (props) => {
                 <Container fluid>
                     <Card body inverse color="primary"><b>About</b></Card>
                 </Container>
-
             </Jumbotron>
         </div>
     )
