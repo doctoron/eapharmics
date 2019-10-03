@@ -29,7 +29,7 @@ class FullPost extends Component {
 
     render () {
         let post = <p style={{ textAlign: 'center' }}>Please select a Post!</p>
-        if (this.propsid) {
+        if (this.props.id) {
             post = <p style={{ textAlign: 'center' }}>Loading...!</p>
         }
         if (this.state.loadedPost) {

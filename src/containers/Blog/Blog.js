@@ -24,8 +24,7 @@ class Blog extends Component {
     componentDidMount () {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(response => {
-                const posts = response.data.slice(0, 4
-                );
+                const posts = response.data.slice(0, 4);
                 const updatedPosts = posts.map(post => {
                     return {
                         ...post,
@@ -43,6 +42,7 @@ class Blog extends Component {
     postSelectorHandler = (id) => {
         this.setState({ selectedPostId: id });
     }
+    
     render () {
         let posts = <h2 style={{ textAlign: 'center' }}>Oh oh, something went wrong! </h2>;
         if (!this.state.error) {

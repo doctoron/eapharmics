@@ -1,49 +1,69 @@
 import React, { Component } from 'react';
-import { Jumbotron, Container, Card, Button } from 'reactstrap';
+import { Jumbotron, Container, Card, CardBody } from 'reactstrap';
 
+import axios from 'axios';
 import ToxinList from '../Chemicals/ToxinList';
 import './Toxics.css';
-import Axios from 'axios';
+
+
 
 class ToxicList extends Component {
     state = {
-        toxins: []
+        toxins: [],
+        selectedToxinId: null,
+        updatedToxins: [],
+        error: false
     }
     componentDidMount () {
-        // Axios.get('https://eapharmics.firebaseio.com/Chemical/aZmOqXgRtJN2MPK5sGXjH25WkT83.json?auth=Jk9tQwysQNoVWJGPJ0OrEvhApWFuFEnMjLstzZLN')
-        Axios.get('https://eapharmics.firebaseio.com/data.json')
+        axios.get('https://eapharmics.firebaseio.com/.json')
+        // Over 1642 Chemicals
             .then(response => {
-                const toxins = response.data.slice(0, 6);
+                const toxins = response.data.slice(0, 200);
                 const updatedToxins = toxins.map(toxin => {
                     return {
-                        ...toxin,
-                        Chemical: 'EPA Listed'
+                        ...toxins
                     };
                 });
-                this.setState({ toxins: updatedToxins });
+                this.setState({ toxins: updatedToxins })
                 console.log(response);
+            })
+            .catch(error => {
+                console.log(error);
+                this.setState({ error: true })
             });
     }
-    render () {
-        const toxins = this.state.toxins.map(toxin => {
-            return <ToxinList key={toxin.id} />
-        });
-        return (
-            <div >
-                <Jumbotron fluid className='epaHero'>
-                    <Container fluid>
-                        <Card body inverse color="danger" style={{ opacity: 0.7 }}><b> USEPA Toxic Chemicals</b>
-                            <form>
-                                <input>
-                                </input> <br /><br />
-                                <Button color="warning"> Search</Button>
-                            </form>
-                        </Card>
-                        {toxins}
-                    </Container>
+    toxinSelectorHandler = (id) => {
+        this.setState({ selectedToxinId: id })
+    }
 
-                </Jumbotron>
-            </div >
+    render () {
+        let toxins = <h2 style={{ textAlign: 'center' }}>Oh oh, something went wrong! </h2>
+        if (!this.state.error) {
+            toxins = this.state.toxins.map(toxin => {
+                return <ToxinList
+                    key={toxins.id}
+                    toxin={toxin.chemical}
+                    clicked={() => this.toxinSelectorHandler(toxins.id)} />
+            })
+        }
+
+        return (
+            <Jumbotron>
+                <Container>
+                    <h3 style={{ color: '#0f120d' }}>Toxin List</h3>
+                    <Card>
+                        <CardBody className='toxins'>
+                            {this.state.updatedToxins}
+                            <ToxinList />
+                        </CardBody>
+                        <ul >
+                            <li>ToxinList.js</li>
+                            <li></li>
+                            <li></li>
+                        </ul >
+                    </Card>
+                </Container>
+            </Jumbotron>
         )
     }
 }
